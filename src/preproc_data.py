@@ -32,7 +32,7 @@ def save_data_folder(df_labels, folder_path, raw_data_dir):
         image = transform(image)
         cls_folder = join(folder_path, str(row.level))
         mkdir(cls_folder)
-        image.save(join(cls_folder, name), 'jpeg')
+        image.save(join(cls_folder, name+'.jpeg'), 'jpeg')
         
 def save_dataset(train_labels_path, raw_data_dir, save_data_dir, val_split):
     train_labels = pd.read_csv(train_labels_path, index_col=0)
